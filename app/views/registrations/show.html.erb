@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Customer:</strong>
+  <%= @registration.customer %>
+</p>
+
+<p>
+  <strong>Lien fees:</strong>
+  <%= @registration.lien_fees %>
+</p>
+
+<p>
+  <strong>Title fee:</strong>
+  <%= @registration.title_fee %>
+</p>
+
+<p>
+  <strong>Sale tax:</strong>
+  <%= @registration.sale_tax %>
+</p>
+
+<p>
+  <strong>Registration:</strong>
+  <%= @registration.registration %>
+</p>
+
+<p>
+  <strong>Reg surcharge:</strong>
+  <%= @registration.reg_surcharge %>
+</p>
+
+<p>
+  <strong>Tag transfer:</strong>
+  <%= @registration.tag_transfer %>
+</p>
+
+<p>
+  <strong>Special plates:</strong>
+  <%= @registration.special_plates %>
+</p>
+
+<p>
+  <strong>Online fee:</strong>
+  <%= @registration.online_fee %>
+</p>
+
+<p>
+  <strong>Mva total:</strong>
+  <%= @registration.mva_total %>
+</p>
+
+<p>
+  <strong>Service fee:</strong>
+  <%= @registration.service_fee %>
+</p>
+
+<p>
+  <strong>Paid total:</strong>
+  <%= @registration.paid_total %>
+</p>
+
+<%= link_to 'Edit', edit_registration_path(@registration) %> |
+<%= link_to 'Back', registrations_path %>

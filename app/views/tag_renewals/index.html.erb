@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Tag Renewals</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Customer</th>
+      <th>Registration</th>
+      <th>Reg surcharge</th>
+      <th>Special plates</th>
+      <th>Mva fee</th>
+      <th>Temp registration</th>
+      <th>Admin flag fee</th>
+      <th>Online fee</th>
+      <th>Mva fee</th>
+      <th>Service fee</th>
+      <th>Paid total</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tag_renewals.each do |tag_renewal| %>
+      <tr>
+        <td><%= tag_renewal.customer %></td>
+        <td><%= tag_renewal.registration %></td>
+        <td><%= tag_renewal.reg_surcharge %></td>
+        <td><%= tag_renewal.special_plates %></td>
+        <td><%= tag_renewal.mva_fee %></td>
+        <td><%= tag_renewal.temp_registration %></td>
+        <td><%= tag_renewal.admin_flag_fee %></td>
+        <td><%= tag_renewal.online_fee %></td>
+        <td><%= tag_renewal.mva_fee %></td>
+        <td><%= tag_renewal.service_fee %></td>
+        <td><%= tag_renewal.paid_total %></td>
+        <td><%= link_to 'Show', tag_renewal %></td>
+        <td><%= link_to 'Edit', edit_tag_renewal_path(tag_renewal) %></td>
+        <td><%= link_to 'Destroy', tag_renewal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tag Renewal', new_tag_renewal_path %>

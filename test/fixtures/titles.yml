@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  customer: MyString
+  title_number: MyString
+  lien_fees: 1
+  title_fee: 1
+  tax_fee: 1
+  online_fee: 1
+  mva_total: 1
+  service_fee: 1
+  total_paid: 1
+
+two:
+  customer: MyString
+  title_number: MyString
+  lien_fees: 1
+  title_fee: 1
+  tax_fee: 1
+  online_fee: 1
+  mva_total: 1
+  service_fee: 1
+  total_paid: 1

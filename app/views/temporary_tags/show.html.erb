@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Customer:</strong>
+  <%= @temporary_tag.customer %>
+</p>
+
+<p>
+  <strong>Lien fee:</strong>
+  <%= @temporary_tag.lien_fee %>
+</p>
+
+<p>
+  <strong>Title fee:</strong>
+  <%= @temporary_tag.title_fee %>
+</p>
+
+<p>
+  <strong>Tax fee:</strong>
+  <%= @temporary_tag.tax_fee %>
+</p>
+
+<p>
+  <strong>Temp tag:</strong>
+  <%= @temporary_tag.temp_tag %>
+</p>
+
+<p>
+  <strong>Special plates:</strong>
+  <%= @temporary_tag.special_plates %>
+</p>
+
+<p>
+  <strong>Online fee:</strong>
+  <%= @temporary_tag.online_fee %>
+</p>
+
+<p>
+  <strong>Mva total:</strong>
+  <%= @temporary_tag.mva_total %>
+</p>
+
+<p>
+  <strong>Service fee:</strong>
+  <%= @temporary_tag.service_fee %>
+</p>
+
+<p>
+  <strong>Total paid:</strong>
+  <%= @temporary_tag.total_paid %>
+</p>
+
+<%= link_to 'Edit', edit_temporary_tag_path(@temporary_tag) %> |
+<%= link_to 'Back', temporary_tags_path %>

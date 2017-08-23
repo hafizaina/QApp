@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Temporary Tags</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Customer</th>
+      <th>Lien fee</th>
+      <th>Title fee</th>
+      <th>Tax fee</th>
+      <th>Temp tag</th>
+      <th>Special plates</th>
+      <th>Online fee</th>
+      <th>Mva total</th>
+      <th>Service fee</th>
+      <th>Total paid</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @temporary_tags.each do |temporary_tag| %>
+      <tr>
+        <td><%= temporary_tag.customer %></td>
+        <td><%= temporary_tag.lien_fee %></td>
+        <td><%= temporary_tag.title_fee %></td>
+        <td><%= temporary_tag.tax_fee %></td>
+        <td><%= temporary_tag.temp_tag %></td>
+        <td><%= temporary_tag.special_plates %></td>
+        <td><%= temporary_tag.online_fee %></td>
+        <td><%= temporary_tag.mva_total %></td>
+        <td><%= temporary_tag.service_fee %></td>
+        <td><%= temporary_tag.total_paid %></td>
+        <td><%= link_to 'Show', temporary_tag %></td>
+        <td><%= link_to 'Edit', edit_temporary_tag_path(temporary_tag) %></td>
+        <td><%= link_to 'Destroy', temporary_tag, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Temporary Tag', new_temporary_tag_path %>

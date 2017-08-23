@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Registrations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Customer</th>
+      <th>Lien fees</th>
+      <th>Title fee</th>
+      <th>Sale tax</th>
+      <th>Registration</th>
+      <th>Reg surcharge</th>
+      <th>Tag transfer</th>
+      <th>Special plates</th>
+      <th>Online fee</th>
+      <th>Mva total</th>
+      <th>Service fee</th>
+      <th>Paid total</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @registrations.each do |registration| %>
+      <tr>
+        <td><%= registration.customer %></td>
+        <td><%= registration.lien_fees %></td>
+        <td><%= registration.title_fee %></td>
+        <td><%= registration.sale_tax %></td>
+        <td><%= registration.registration %></td>
+        <td><%= registration.reg_surcharge %></td>
+        <td><%= registration.tag_transfer %></td>
+        <td><%= registration.special_plates %></td>
+        <td><%= registration.online_fee %></td>
+        <td><%= registration.mva_total %></td>
+        <td><%= registration.service_fee %></td>
+        <td><%= registration.paid_total %></td>
+        <td><%= link_to 'Show', registration %></td>
+        <td><%= link_to 'Edit', edit_registration_path(registration) %></td>
+        <td><%= link_to 'Destroy', registration, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Registration', new_registration_path %>

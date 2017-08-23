@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  customer: MyString
+  lien_fees: 1
+  title_fee: 1
+  sale_tax: 1
+  registration: 1
+  reg_surcharge: 1
+  tag_transfer: 1
+  special_plates: 1
+  online_fee: 1
+  mva_total: 1
+  service_fee: 1
+  paid_total: 1
+
+two:
+  customer: MyString
+  lien_fees: 1
+  title_fee: 1
+  sale_tax: 1
+  registration: 1
+  reg_surcharge: 1
+  tag_transfer: 1
+  special_plates: 1
+  online_fee: 1
+  mva_total: 1
+  service_fee: 1
+  paid_total: 1

@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Customer:</strong>
+  <%= @receipt.customer %>
+</p>
+
+<p>
+  <strong>Title number:</strong>
+  <%= @receipt.title_number %>
+</p>
+
+<p>
+  <strong>Lien fees:</strong>
+  <%= @receipt.lien_fees %>
+</p>
+
+<p>
+  <strong>Title fee:</strong>
+  <%= @receipt.title_fee %>
+</p>
+
+<p>
+  <strong>Tax fee:</strong>
+  <%= @receipt.tax_fee %>
+</p>
+
+<p>
+  <strong>Online fee:</strong>
+  <%= @receipt.online_fee %>
+</p>
+
+<p>
+  <strong>Mva total:</strong>
+  <%= @receipt.mva_total %>
+</p>
+
+<p>
+  <strong>Service fee:</strong>
+  <%= @receipt.service_fee %>
+</p>
+
+<p>
+  <strong>Total paid:</strong>
+  <%= @receipt.total_paid %>
+</p>
+
+<%= link_to 'Edit', edit_title_path(@receipt) %> |
+<%= link_to 'Back', titles_path %>

@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  customer: MyString
+  registration: 1
+  reg_surcharge: 1
+  special_plates: 1
+  mva_fee: 1
+  temp_registration: 1
+  admin_flag_fee: 1
+  online_fee: 1
+  mva_fee: 1
+  service_fee: 1
+  paid_total: 1
+
+two:
+  customer: MyString
+  registration: 1
+  reg_surcharge: 1
+  special_plates: 1
+  mva_fee: 1
+  temp_registration: 1
+  admin_flag_fee: 1
+  online_fee: 1
+  mva_fee: 1
+  service_fee: 1
+  paid_total: 1

@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Receipts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Customer</th>
+      <th>Title number</th>
+      <th>Lien fees</th>
+      <th>Title fee</th>
+      <th>Tax fee</th>
+      <th>Online fee</th>
+      <th>Mva total</th>
+      <th>Service fee</th>
+      <th>Total paid</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @receipts.each do |receipt| %>
+      <tr>
+        <td><%= receipt.customer %></td>
+        <td><%= receipt.title_number %></td>
+        <td><%= receipt.lien_fees %></td>
+        <td><%= receipt.title_fee %></td>
+        <td><%= receipt.tax_fee %></td>
+        <td><%= receipt.online_fee %></td>
+        <td><%= receipt.mva_total %></td>
+        <td><%= receipt.service_fee %></td>
+        <td><%= receipt.total_paid %></td>
+        <td><%= link_to 'Show', receipt %></td>
+        <td><%= link_to 'Edit', edit_title_path(receipt) %></td>
+        <td><%= link_to 'Destroy', receipt, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Title', new_title_path %>

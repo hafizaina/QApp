@@ -1,0 +1,72 @@
+<%= form_with(model: tag_renewal, local: true) do |form| %>
+  <% if tag_renewal.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(tag_renewal.errors.count, "error") %> prohibited this tag_renewal from being saved:</h2>
+
+      <ul>
+      <% tag_renewal.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :customer %>
+    <%= form.text_field :customer, id: :tag_renewal_customer %>
+  </div>
+
+  <div class="field">
+    <%= form.label :registration %>
+    <%= form.number_field :registration, id: :tag_renewal_registration %>
+  </div>
+
+  <div class="field">
+    <%= form.label :reg_surcharge %>
+    <%= form.number_field :reg_surcharge, id: :tag_renewal_reg_surcharge %>
+  </div>
+
+  <div class="field">
+    <%= form.label :special_plates %>
+    <%= form.number_field :special_plates, id: :tag_renewal_special_plates %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mva_fee %>
+    <%= form.number_field :mva_fee, id: :tag_renewal_mva_fee %>
+  </div>
+
+  <div class="field">
+    <%= form.label :temp_registration %>
+    <%= form.number_field :temp_registration, id: :tag_renewal_temp_registration %>
+  </div>
+
+  <div class="field">
+    <%= form.label :admin_flag_fee %>
+    <%= form.number_field :admin_flag_fee, id: :tag_renewal_admin_flag_fee %>
+  </div>
+
+  <div class="field">
+    <%= form.label :online_fee %>
+    <%= form.number_field :online_fee, id: :tag_renewal_online_fee %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mva_fee %>
+    <%= form.number_field :mva_fee, id: :tag_renewal_mva_fee %>
+  </div>
+
+  <div class="field">
+    <%= form.label :service_fee %>
+    <%= form.number_field :service_fee, id: :tag_renewal_service_fee %>
+  </div>
+
+  <div class="field">
+    <%= form.label :paid_total %>
+    <%= form.number_field :paid_total, id: :tag_renewal_paid_total %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
