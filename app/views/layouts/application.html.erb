@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>QApp</title>
+    <title><%= full_title(yield(:title)) %></title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +9,27 @@
   </head>
 
   <body>
-    <%= yield %>
+
+    <header class="navbar navbar-fixed-top navbar-inverse">
+      <div class="container">
+        <%= link_to "QApp", '#', id:"logo" %>
+        <nav>
+          <ul class="nav navbar-nav navbar-right">
+            <li><%= link_to "Home",               '#' %></li>
+            <li><%= link_to "Registrations",      '#' %></li>
+            <li><%= link_to "Renewals",           '#' %></li>
+            <li><%= link_to "Temp Tags",          '#' %></li>
+            <li><%= link_to "Titles",             '#' %></li>
+            <li><%= link_to "Log in",             '#' %></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="container">
+      <%= yield %>
+    </div>
+
   </body>
+
 </html>

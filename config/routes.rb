@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'application#home'
   resources :titles
   resources :temporary_tags
   resources :tag_renewals
