@@ -1,0 +1,38 @@
+<div class="form">
+  <%= form_tag('/registrations', method: :get, id: 'search-form') do %>
+      <table>
+
+        <tr>
+          <th>Customer Name:</th>
+          <td><%= text_field_tag :customer_name, params[:customer_name]%></td>
+
+          <th>Start Date:</th>
+          <td><%= date_field_tag :start_date, params[:start_date]%></td>
+
+          <th>End Date:</th>
+          <td><%= date_field_tag :end_date, params[:end_date]%></td>
+
+        </tr>
+
+        <tr>
+          <th>Transaction ID:</th>
+          <td><%= text_field_tag :search, params[:search] %></td>
+
+          <th>Min. Total:</th>
+          <td><%= number_field_tag :total, min: 1 %></td>
+
+          <th>Max Total:</th>
+          <td><%= number_field_tag :total, min: 1 %></td>
+
+        </tr>
+
+        <tr>
+          <th>
+            <%= button_tag 'Filter', class: 'btn btn-warning btn-vertically-slim' %>
+            <%= button_tag 'Clear', class: 'btn btn-Primary btn-vertically-slim' %>
+          </th>
+        </tr>
+
+      </table>
+  <% end %>
+</div>

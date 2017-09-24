@@ -1,13 +1,13 @@
 <footer class="footer">
   <small>
-    The <a href="http://www.railstutorial.org/">Ruby on Rails Tutorial</a>
-    by <a href="http://www.michaelhartl.com/">Michael Hartl</a>
+    <%= link_to "The Q App", root_path %>
   </small>
   <nav>
     <ul>
-      <li><%= link_to "About",   '#' %></li>
-      <li><%= link_to "Contact", '#' %></li>
-      <li><a href="http://news.railstutorial.org/">News</a></li>
+      <li><%= link_to "Registrations",      registrations_path %></li>
+      <li><%= link_to "Renewals",           tag_renewals_path %></li>
+      <li><%= link_to "Temp Tags",          temporary_tags_path %></li>
+      <li><%= link_to "Titles",             titles_path %></li>
     </ul>
   </nav>
 </footer>

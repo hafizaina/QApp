@@ -1,13 +1,13 @@
 <header class="navbar navbar-static-top navbar-inverse">
   <div class="container">
-    <%= link_to "QApp", '#', id:"logo" %>
+    <%= link_to "QApp", root_path, id:"logo" %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Home",               '#' %></li>
-        <li><%= link_to "Registrations",      '#' %></li>
-        <li><%= link_to "Renewals",           '#' %></li>
-        <li><%= link_to "Temp Tags",          '#' %></li>
-        <li><%= link_to "Titles",             '#' %></li>
+        <li><%= link_to "Home",               root_path %></li>
+        <li><%= link_to "Registrations",      registrations_path %></li>
+        <li><%= link_to "Renewals",           tag_renewals_path %></li>
+        <li><%= link_to "Temp Tags",          temporary_tags_path %></li>
+        <li><%= link_to "Titles",             titles_path %></li>
         <li><%= link_to "Log in",             '#' %></li>
       </ul>
     </nav>

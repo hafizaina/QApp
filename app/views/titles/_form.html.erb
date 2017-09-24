@@ -1,10 +1,10 @@
-<%= form_with(model: receipt, local: true) do |form| %>
-  <% if receipt.errors.any? %>
+<%= form_with(model: title, local: true) do |form| %>
+  <% if title.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(receipt.errors.count, "error") %> prohibited this receipt from being saved:</h2>
+      <h2><%= pluralize(title.errors.count, "error") %> prohibited this title from being saved:</h2>
 
       <ul>
-      <% receipt.errors.full_messages.each do |message| %>
+      <% title.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
@@ -13,47 +13,47 @@
 
   <div class="field">
     <%= form.label :customer %>
-    <%= form.text_field :customer, id: :receipt_customer %>
+    <%= form.text_field :customer, id: :title_customer %>
   </div>
 
   <div class="field">
     <%= form.label :title_number %>
-    <%= form.text_field :title_number, id: :receipt_title_number %>
+    <%= form.text_field :title_number, id: :title_title_number %>
   </div>
 
   <div class="field">
     <%= form.label :lien_fees %>
-    <%= form.number_field :lien_fees, id: :receipt_lien_fees %>
+    <%= form.number_field :lien_fees, id: :title_lien_fees %>
   </div>
 
   <div class="field">
     <%= form.label :title_fee %>
-    <%= form.number_field :title_fee, id: :receipt_title_fee %>
+    <%= form.number_field :title_fee, id: :title_title_fee %>
   </div>
 
   <div class="field">
     <%= form.label :tax_fee %>
-    <%= form.number_field :tax_fee, id: :receipt_tax_fee %>
+    <%= form.number_field :tax_fee, id: :title_tax_fee %>
   </div>
 
   <div class="field">
     <%= form.label :online_fee %>
-    <%= form.number_field :online_fee, id: :receipt_online_fee %>
+    <%= form.number_field :online_fee, id: :title_online_fee %>
   </div>
 
   <div class="field">
     <%= form.label :mva_total %>
-    <%= form.number_field :mva_total, id: :receipt_mva_total %>
+    <%= form.number_field :mva_total, id: :title_mva_total %>
   </div>
 
   <div class="field">
     <%= form.label :service_fee %>
-    <%= form.number_field :service_fee, id: :receipt_service_fee %>
+    <%= form.number_field :service_fee, id: :title_service_fee %>
   </div>
 
   <div class="field">
     <%= form.label :total_paid %>
-    <%= form.number_field :total_paid, id: :receipt_total_paid %>
+    <%= form.number_field :total_paid, id: :title_total_paid %>
   </div>
 
   <div class="actions">
