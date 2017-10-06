@@ -3,8 +3,7 @@
 <br />
 <br />
 
-<%= button_tag 'New Entry', class: 'btn btn-success btn-vertically-slim' %>
-<br />
+<%= button_to 'New Entry', "/#{link_name}/new", method: :get, class: 'btn btn-success btn-vertically-slim' %>
 <br />
 
 <table id="listing" border="1px solid #000">
@@ -32,7 +31,3 @@
   <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'Add New Entry', "/#{link_name}/new", method: :get %>

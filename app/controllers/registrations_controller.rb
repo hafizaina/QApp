@@ -5,6 +5,14 @@ class RegistrationsController < ApplicationController
   # GET /registrations.json
   def index
     @registrations = Registration.all
+    @registrations = @registrations.customers(params[:customer]) if params[:customer].present?
+    @registrations = @registrations.startDate(params[:start_date]) if params[:start_date].present?
+    @registrations = @registrations.endDate(params[:end_date]) if params[:end_date].present?
+    # if params[:customer_name]
+    #   @registrations = Registration.customers(params[:customer_name]).order("created_at DESC")
+    # else
+    #   @registrations = Registration.all
+    # end
   end
 
   # GET /registrations/1

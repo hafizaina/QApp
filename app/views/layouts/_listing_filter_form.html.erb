@@ -4,7 +4,7 @@
 
         <tr>
           <th>Customer Name:</th>
-          <td><%= text_field_tag :customer_name, params[:customer_name]%></td>
+          <td><%= text_field_tag :customer, params[:customer]%></td>
 
           <th>Start Date:</th>
           <td><%= date_field_tag :start_date, params[:start_date]%></td>
@@ -28,7 +28,7 @@
 
         <tr>
           <th>
-            <%= button_tag 'Filter', class: 'btn btn-warning btn-vertically-slim' %>
+            <%= submit_tag 'Filter', class: 'btn btn-warning btn-vertically-slim', name: nil %>
             <%= button_tag 'Clear', class: 'btn btn-Primary btn-vertically-slim' %>
           </th>
         </tr>
