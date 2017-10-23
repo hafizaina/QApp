@@ -1,5 +1,1 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Registrations</h1>
-
-<%= render 'layouts/listing', link_name: :registrations, items: @registrations %>
+<%= render 'layouts/listing', heading: :Registrations, type_name: :registrations, items: @registrations, items_path: registrations_path, notice: notice %>

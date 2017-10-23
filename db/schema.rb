@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170823010558) do
+ActiveRecord::Schema.define(version: 20171013030850) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 20170823010558) do
     t.integer "online_fee"
     t.integer "mva_total"
     t.integer "service_fee"
-    t.integer "paid_total"
+    t.integer "total_paid"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -42,7 +42,7 @@ ActiveRecord::Schema.define(version: 20170823010558) do
     t.integer "admin_flag_fee"
     t.integer "online_fee"
     t.integer "service_fee"
-    t.integer "paid_total"
+    t.integer "total_paid"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

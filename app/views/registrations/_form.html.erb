@@ -1,78 +1,77 @@
 <%= form_with(model: registration, local: true) do |form| %>
-  <% if registration.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(registration.errors.count, "error") %> prohibited this registration from being saved:</h2>
+    <% if registration.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(registration.errors.count, "error") %> prohibited this registration from being saved:</h2>
 
-      <ul>
-      <% registration.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+          <ul>
+            <% registration.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div class="field">
+      <%= form.label :customer %>
+      <%= form.text_field :customer, id: :registration_customer %>
     </div>
-  <% end %>
 
-  <div class="field">
-    <%= form.label :customer %>
-    <%= form.text_field :customer, id: :registration_customer %>
-  </div>
+    <div class="field">
+      <%= form.label :lien_fees %>
+      <%= form.number_field :lien_fees, id: :registration_lien_fees %>
+    </div>
 
-  <div class="field">
-    <%= form.label :lien_fees %>
-    <%= form.number_field :lien_fees, id: :registration_lien_fees %>
-  </div>
+    <div class="field">
+      <%= form.label :title_fee %>
+      <%= form.number_field :title_fee, id: :registration_title_fee %>
+    </div>
 
-  <div class="field">
-    <%= form.label :title_fee %>
-    <%= form.number_field :title_fee, id: :registration_title_fee %>
-  </div>
+    <div class="field">
+      <%= form.label :sale_tax %>
+      <%= form.number_field :sale_tax, id: :registration_sale_tax %>
+    </div>
 
-  <div class="field">
-    <%= form.label :sale_tax %>
-    <%= form.number_field :sale_tax, id: :registration_sale_tax %>
-  </div>
+    <div class="field">
+      <%= form.label :registration %>
+      <%= form.number_field :registration, id: :registration_registration %>
+    </div>
 
-  <div class="field">
-    <%= form.label :registration %>
-    <%= form.number_field :registration, id: :registration_registration %>
-  </div>
+    <div class="field">
+      <%= form.label :reg_surcharge %>
+      <%= form.number_field :reg_surcharge, id: :registration_reg_surcharge %>
+    </div>
 
-  <div class="field">
-    <%= form.label :reg_surcharge %>
-    <%= form.number_field :reg_surcharge, id: :registration_reg_surcharge %>
-  </div>
+    <div class="field">
+      <%= form.label :tag_transfer %>
+      <%= form.number_field :tag_transfer, id: :registration_tag_transfer %>
+    </div>
 
-  <div class="field">
-    <%= form.label :tag_transfer %>
-    <%= form.number_field :tag_transfer, id: :registration_tag_transfer %>
-  </div>
+    <div class="field">
+      <%= form.label :special_plates %>
+      <%= form.number_field :special_plates, id: :registration_special_plates %>
+    </div>
 
-  <div class="field">
-    <%= form.label :special_plates %>
-    <%= form.number_field :special_plates, id: :registration_special_plates %>
-  </div>
+    <div class="field">
+      <%= form.label :online_fee %>
+      <%= form.number_field :online_fee, id: :registration_online_fee %>
+    </div>
 
-  <div class="field">
-    <%= form.label :online_fee %>
-    <%= form.number_field :online_fee, id: :registration_online_fee %>
-  </div>
+    <div class="field">
+      <%= form.label :mva_total %>
+      <%= form.number_field :mva_total, id: :registration_mva_total %>
+    </div>
 
-  <div class="field">
-    <%= form.label :mva_total %>
-    <%= form.number_field :mva_total, id: :registration_mva_total %>
-  </div>
+    <div class="field">
+      <%= form.label :service_fee %>
+      <%= form.number_field :service_fee, id: :registration_service_fee %>
+    </div>
 
-  <div class="field">
-    <%= form.label :service_fee %>
-    <%= form.number_field :service_fee, id: :registration_service_fee %>
-  </div>
+    <div class="field">
+      <%= form.label :paid_total %>
+      <%= form.number_field :paid_total, id: :registration_paid_total %>
+    </div>
 
-  <div class="field">
-    <%= form.label :paid_total %>
-    <%= form.number_field :paid_total, id: :registration_paid_total %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+    <div class="actions">
+      <%= form.submit %>
+    </div>
 <% end %>
-<!-- Testing -->

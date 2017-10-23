@@ -1,0 +1,130 @@
+<p id="notice"><%= notice %></p>
+
+<% if item.has_attribute? :customer %>
+    <p>
+      <strong>Customer:</strong>
+      <%= item.customer %>
+    </p>
+<% end %>
+
+<% if item.has_attribute? :lien_fees %>
+    <p>
+      <strong>Lien Fees:</strong>
+      <%= item.lien_fees %>
+    </p>
+<% end %>
+
+<% if item.has_attribute? :title_fee %>
+    <p>
+      <strong>Title Fee:</strong>
+      <%= item.title_fee %>
+    </p>
+<% end %>
+
+<% if item.has_attribute? :registration %>
+    <p>
+      <strong>Registration:</strong>
+      <%= item.registration %>
+    </p>
+<% end %>
+
+<% if item.has_attribute? :reg_surcharge %>
+    <p>
+      <strong>Reg Surcharge:</strong>
+      <%= item.reg_surcharge %>
+    </p>
+<% end %>
+
+<% if item.has_attribute? :tag_transfer %>
+    <p>
+      <strong>Tag Transfer:</strong>
+      <%= item.tag_transfer %>
+    </p>
+<% end %>
+
+<% if item.has_attribute? :tag_registration %>
+    <p>
+      <strong>Tag Registration:</strong>
+      <%= item.tag_registration %>
+    </p>
+<% end %>
+
+<% if item.has_attribute? :special_plates %>
+    <p>
+      <strong>Special Plates:</strong>
+      <%= item.special_plates %>
+    </p>
+<% end %>
+
+<% if item.has_attribute? :mva_fee %>
+    <p>
+      <strong>MVA Fee:</strong>
+      <%= item.mva_fee %>
+    </p>
+<% end %>
+
+<% if item.has_attribute? :temp_tag %>
+    <p>
+      <strong>Temp Tag:</strong>
+      <%= item.temp_tag %>
+    </p>
+<% end %>
+
+<% if item.has_attribute? :temp_registration %>
+    <p>
+      <strong>Temp Registration:</strong>
+      <%= item.temp_registration %>
+    </p>
+<% end %>
+
+<% if item.has_attribute? :admin_flag_fee %>
+    <p>
+      <strong>Admin Flag Fee:</strong>
+      <%= item.admin_flag_fee %>
+    </p>
+<% end %>
+
+<% if item.has_attribute? :online_fee %>
+    <p>
+      <strong>Online Fee:</strong>
+      <%= item.online_fee %>
+    </p>
+<% end %>
+
+<% if item.has_attribute? :service_fee %>
+    <p>
+      <strong>Service Fee:</strong>
+      <%= item.service_fee %>
+    </p>
+<% end %>
+
+<% if item.has_attribute? :mva_total %>
+    <p>
+      <strong>MVA Total:</strong>
+      <%= item.mva_total %>
+    </p>
+<% end %>
+
+<% if item.has_attribute? :tax_fee %>
+    <p>
+      <strong>Tax Fee:</strong>
+      <%= item.tax_fee %>
+    </p>
+<% end %>
+
+<% if item.has_attribute? :sale_tax %>
+    <p>
+      <strong>Sale Tax:</strong>
+      <%= item.sale_tax %>
+    </p>
+<% end %>
+
+<% if item.has_attribute? :total_paid %>
+    <p>
+      <strong>Total Paid:</strong>
+      <%= item.total_paid %>
+    </p>
+<% end %>
+
+<%= link_to 'Edit', "/#{type_name}/#{item.id}/edit", method: :get %> |
+<%= link_to 'Back', items_path %>

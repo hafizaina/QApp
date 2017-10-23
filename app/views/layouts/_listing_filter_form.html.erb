@@ -1,5 +1,5 @@
 <div class="form">
-  <%= form_tag('/registrations', method: :get, id: 'search-form') do %>
+  <%= form_tag("/#{type_name}/", method: :get, id: 'search-form') do %>
       <table>
 
         <tr>
@@ -29,7 +29,7 @@
         <tr>
           <th>
             <%= submit_tag 'Filter', class: 'btn btn-warning btn-vertically-slim', name: nil %>
-            <%= button_tag 'Clear', class: 'btn btn-Primary btn-vertically-slim' %>
+            <%= link_to 'Clear', items_path, class: 'btn btn-Primary btn-cancel btn-vertically-slim' %>
           </th>
         </tr>
 

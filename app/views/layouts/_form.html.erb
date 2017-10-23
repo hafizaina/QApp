@@ -1,0 +1,151 @@
+<h1><%= heading %></h1>
+
+<%= form_with(model: item, local: true) do |form| %>
+    <% if item.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(item.errors.count, "error") %> prohibited this item from being saved:</h2>
+
+          <ul>
+            <% item.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <% if item.has_attribute? :customer %>
+      <div class="field">
+        <%= form.label :customer %>
+        <%= form.text_field :customer, id: :item_customer %>
+      </div>
+    <% end %>
+
+    <% if item.has_attribute? :lien_fees %>
+        <div class="field">
+          <%= form.label :lien_fees %>
+          <%= form.number_field :lien_fees, id: :item_lien_fees %>
+        </div>
+    <% end %>
+
+    <% if item.has_attribute? :title_fee %>
+        <div class="field">
+          <%= form.label :title_fee %>
+          <%= form.number_field :title_fee, id: :item_title_fee %>
+        </div>
+    <% end %>
+
+    <% if item.has_attribute? :registration %>
+      <div class="field">
+        <%= form.label :registration %>
+        <%= form.number_field :registration, id: :item_registration %>
+      </div>
+    <% end %>
+
+    <% if item.has_attribute? :reg_surcharge %>
+      <div class="field">
+        <%= form.label :reg_surcharge %>
+        <%= form.number_field :reg_surcharge, id: :item_reg_surcharge %>
+      </div>
+    <% end %>
+
+    <% if item.has_attribute? :tag_transfer %>
+        <div class="field">
+          <%= form.label :tag_transfer %>
+          <%= form.number_field :tag_transfer, id: :item_tag_transfer %>
+        </div>
+    <% end %>
+
+    <% if item.has_attribute? :tag_registration %>
+        <div class="field">
+          <%= form.label :tag_registration %>
+          <%= form.number_field :tag_registration, id: :item_tag_registration %>
+        </div>
+    <% end %>
+
+    <% if item.has_attribute? :special_plates %>
+      <div class="field">
+        <%= form.label :special_plates %>
+        <%= form.number_field :special_plates, id: :item_special_plates %>
+      </div>
+    <% end %>
+
+    <% if item.has_attribute? :mva_fee %>
+      <div class="field">
+        <%= form.label :mva_fee %>
+        <%= form.number_field :mva_fee, id: :item_mva_fee %>
+      </div>
+    <% end %>
+
+    <% if item.has_attribute? :temp_tag %>
+        <div class="field">
+          <%= form.label :temp_tag %>
+          <%= form.number_field :temp_tag, id: :item_temp_tag %>
+        </div>
+    <% end %>
+
+    <% if item.has_attribute? :temp_registration %>
+      <div class="field">
+        <%= form.label :temp_registration %>
+        <%= form.number_field :temp_registration, id: :item_temp_registration %>
+      </div>
+    <% end %>
+
+    <% if item.has_attribute? :admin_flag_fee %>
+      <div class="field">
+        <%= form.label :admin_flag_fee %>
+        <%= form.number_field :admin_flag_fee, id: :item_admin_flag_fee %>
+      </div>
+    <% end %>
+
+    <% if item.has_attribute? :online_fee %>
+      <div class="field">
+        <%= form.label :online_fee %>
+        <%= form.number_field :online_fee, id: :item_online_fee %>
+      </div>
+    <% end %>
+
+    <% if item.has_attribute? :service_fee %>
+      <div class="field">
+        <%= form.label :service_fee %>
+        <%= form.number_field :service_fee, id: :item_service_fee %>
+      </div>
+    <% end %>
+
+    <% if item.has_attribute? :mva_total %>
+        <div class="field">
+          <%= form.label :mva_total %>
+          <%= form.number_field :mva_total, id: :item_mva_total %>
+        </div>
+    <% end %>
+
+    <% if item.has_attribute? :tax_fee %>
+        <div class="field">
+          <%= form.label :tax_fee %>
+          <%= form.number_field :tax_fee, id: :item_tax_fee %>
+        </div>
+    <% end %>
+
+    <% if item.has_attribute? :sale_tax %>
+        <div class="field">
+          <%= form.label :sale_tax %>
+          <%= form.number_field :sale_tax, id: :item_sale_tax %>
+        </div>
+    <% end %>
+
+    <% if item.has_attribute? :total_paid %>
+      <div class="field">
+        <%= form.label :total_paid %>
+        <%= form.number_field :total_paid, id: :item_total_paid %>
+      </div>
+    <% end %>
+
+    <div class="actions">
+      <%= form.submit %>
+    </div>
+<% end %>
+
+<% unless item.new_record? %>
+  <%= link_to 'Show', item %> |
+<% end %>
+
+<%= link_to 'Back', items_path %>

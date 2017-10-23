@@ -1,9 +1,13 @@
-<%= render 'layouts/listing_filter_form' %>
+<p id="notice"><%= notice %></p>
+
+<h1><%= heading %></h1>
+
+<%= render 'layouts/listing_filter_form', type_name: type_name, items_path: items_path  %>
 
 <br />
 <br />
 
-<%= button_to 'New Entry', "/#{link_name}/new", method: :get, class: 'btn btn-success btn-vertically-slim' %>
+<%= button_to 'New Entry', "/#{type_name}/new", method: :get, class: 'btn btn-success btn-vertically-slim' %>
 <br />
 
 <table id="listing" border="1px solid #000">
@@ -23,9 +27,9 @@
         <td><%= item.created_at %></td>
         <td><%= item.id %></td>
         <td><%= item.customer %></td>
-        <td><%= item.paid_total %></td>
+        <td><%= item.total_paid %></td>
         <td><%= link_to 'Show', item %></td>
-        <td><%= link_to 'Edit', "/#{link_name}/#{item.id}/edit", method: :get %></td>
+        <td><%= link_to 'Edit', "/#{type_name}/#{item.id}/edit", method: :get %></td>
         <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
   <% end %>
