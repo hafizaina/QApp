@@ -1,0 +1,2 @@
+$("#modal-window").find(".modal-content").html("<%= escape_javascript(render 'layouts/show', item: @registration, type_name: :registrations, items: @registrations, items_path: registrations_path, notice: notice) %>");
+$("#modal-window").modal();

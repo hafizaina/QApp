@@ -10,6 +10,10 @@ class RegistrationsController < ApplicationController
   # GET /registrations/1
   # GET /registrations/1.json
   def show
+    respond_to do |format|
+      format.html
+      format.js { render 'registrations/js/show_modal' }
+    end
   end
 
   # GET /registrations/new
