@@ -2,6 +2,27 @@
 @import "bootstrap";
 
 
+/* mixins, variables, etc. */
+
+$gray-medium-light: #eaeaea;
+
+@mixin box_sizing {
+  -moz-box-sizing:    border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing:         border-box;
+}
+
+/* miscellaneous */
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
+}
+
+
 /* general */
 
 body {
@@ -161,15 +182,19 @@ footer {
 
 /* forms */
 
-.new_user input, textarea, select, .uneditable-input {
+input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
   width: 100%;
   margin-bottom: 15px;
-  @include box_sizing(border-box);
+  @include box_sizing;
 }
 
 input {
   height: auto !important;
+}
+
+input.normal-size {
+  width: auto;
 }
 
 #error_explanation {
