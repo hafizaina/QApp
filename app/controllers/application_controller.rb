@@ -1,4 +1,6 @@
 class ApplicationController < ActionController::Base
+
+  before_action :require_login
   protect_from_forgery with: :exception
   include SessionsHelper
 
@@ -12,5 +14,13 @@ class ApplicationController < ActionController::Base
     items = items.endDate(params[:end_date]) if params[:end_date].present?
     return items
   end
+
+  private
+
+    def require_login
+      unless logged_in?
+        redirect_to login_url
+      end
+    end
 
 end
